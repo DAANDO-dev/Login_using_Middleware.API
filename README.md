@@ -45,6 +45,8 @@ Request body (input): email=test@example.com
 Response Status Code: 400
 Response body (output):
 Invalid input for 'password'
+
+
 Example #5:
 If you receive a HTTP POST request at path "/", if email not is submitted, it should return HTTP 400 response.
 Request Url: /
@@ -53,6 +55,8 @@ Request body (input): password=1234
 Response Status Code: 400
 Response body (output):
 Invalid input for 'password'
+
+
 Example #6:
 If you receive a HTTP GET request at path "/", it should return HTTP 200 response.
 Request Url: /
