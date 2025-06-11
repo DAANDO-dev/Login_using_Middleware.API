@@ -6,6 +6,8 @@ password: any password string
 Finally, it should return message as either "Successful login" or "Invalid login".
 Process:
 If email is "admin@example.com" and password is "admin1234", it is treated as a valid login; otherwise invalid login.
+
+
 Example #1:
 If you receive a HTTP POST request at path "/", if the valid email and password are submitted, it should return HTTP 200 response.
 Request Url: /
@@ -23,6 +25,8 @@ Request body (input): email=manager@example.com&password=manager-password
 Response Status Code: 400
 Response body (output):
 Invalid login
+
+
 Example #3:
 If you receive a HTTP POST request at path "/", if neither email and password is submitted, it should return HTTP 400 response.
 Request Url: /
