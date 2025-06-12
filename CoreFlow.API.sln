@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.36105.23 d17.13
+VisualStudioVersion = 17.13.36105.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreFlow.API", "CoreFlow.API\CoreFlow.API.csproj", "{ACD27ADB-ED45-4393-A203-9D199F76468F}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseWhenExample", "UseWhenExample\UseWhenExample.csproj", "{67B49E5E-3999-4251-8132-0E8ECEC4B768}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{EBEDAC5D-7276-41F0-9F7F-37BDA6B8F98B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{AD852566-F0F7-4ECE-A618-F049265F059F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EBEDAC5D-7276-41F0-9F7F-37BDA6B8F98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBEDAC5D-7276-41F0-9F7F-37BDA6B8F98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBEDAC5D-7276-41F0-9F7F-37BDA6B8F98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD852566-F0F7-4ECE-A618-F049265F059F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD852566-F0F7-4ECE-A618-F049265F059F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD852566-F0F7-4ECE-A618-F049265F059F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD852566-F0F7-4ECE-A618-F049265F059F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
