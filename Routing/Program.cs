@@ -29,7 +29,7 @@ namespace Routing
 
 
                 // EG : employee/profile/JohnDoe
-                endpoints.Map("employee/profile/{EmployeeName?}", async context =>
+                endpoints.Map("employee/profile/{EmployeeName:length(3, 7)=Daki}", async context =>
                 {
                     if (context.Request.RouteValues.ContainsKey("EmployeeName"))
                     {
@@ -57,12 +57,36 @@ namespace Routing
                     }
                     
                 });
+                // EG: daily-report/{reportdate}
+
+                endpoints.Map("daily-digest-report/{reportdate:datetime}", async context =>
+                {
+                    DateTime reportDate = Convert.ToDateTime(context.Request.RouteValues["reportdate"]);
+                    await context.Response.WriteAsync($"In daily-digest-report - {reportDate.ToShortDateString()}");
+                });
+
+                // EG: cities/cityID
+
+                endpoints.Map("cities/{cityid:guid}",async context =>
+                {
+                    Guid cityId = Guid.Parse(Convert.ToString(context.Request.RouteValues["cityid"])!);
+                    await context.Response.WriteAsync($"City information - {cityId}");
+                });
+
+                //sales-report/2030/apr
+                endpoints.Map("sales-report/{year:int:(1900)}/{month:regex(^(apr|jul|oct|jan)$)}", async context =>
+                {
+                    int year = Convert.ToInt32(context.Request.RouteValues["year"]);
+                    string? month = Convert.ToString(context.Request.RouteValues["month"]);
+                    await context.Response.WriteAsync($"Sales report - {year} - {month}");
+                });
+
             });
 
             
             app.Run(async context =>
             {
-                await context.Response.WriteAsync($"Request recieved at {context.Request.Path}");
+                await context.Response.WriteAsync($"No Route matched at  {context.Request.Path}");
             });
 
             app.Run();
