@@ -74,7 +74,7 @@ namespace Routing
                 });
 
                 //sales-report/2030/apr
-                endpoints.Map("sales-report/{year:int:(1900)}/{month:regex(^(apr|jul|oct|jan)$)}", async context =>
+                endpoints.Map("sales-report/{year:int:min(1900)}/{month:regex(^(apr|jul|oct|jan)$)}", async context =>
                 {
                     int year = Convert.ToInt32(context.Request.RouteValues["year"]);
                     string? month = Convert.ToString(context.Request.RouteValues["month"]);
